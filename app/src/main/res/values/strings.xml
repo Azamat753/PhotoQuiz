@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PhotoQuiz</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="start">Начать</string>
+    <string name="exit">Выйти</string>
+    <string name="word">Слово</string>
+    <string name="try_chance">Попробовать</string>
+</resources>
