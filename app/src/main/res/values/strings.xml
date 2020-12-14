@@ -6,4 +6,5 @@
     <string name="exit">Выйти</string>
     <string name="word">Слово</string>
     <string name="try_chance">Попробовать</string>
+    <string name="level">Уровень</string>
 </resources>

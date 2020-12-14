@@ -9,7 +9,7 @@
         android:id="@+id/startFragment"
         android:name="com.lawlett.photoquiz.StartFragment"
         android:label="fragment_start"
-        tools:layout="@layout/fragment_start" >
+        tools:layout="@layout/fragment_start">
         <action
             android:id="@+id/action_startFragment_to_levelsFragment"
             app:destination="@id/levelsFragment" />
@@ -18,14 +18,25 @@
         android:id="@+id/levelsFragment"
         android:name="com.lawlett.photoquiz.LevelsFragment"
         android:label="fragment_levels"
-        tools:layout="@layout/fragment_levels" >
+        tools:layout="@layout/fragment_levels">
         <action
             android:id="@+id/action_levelsFragment_to_gameFragment"
-            app:destination="@id/gameFragment" />
+            app:destination="@id/gameFragment">
+            <argument
+                android:name="level"
+                android:defaultValue="0"
+                app:argType="integer" />
+        </action>
     </fragment>
     <fragment
         android:id="@+id/gameFragment"
         android:name="com.lawlett.photoquiz.GameFragment"
         android:label="fragment_game"
-        tools:layout="@layout/fragment_game" />
+        tools:layout="@layout/fragment_game">
+        <argument
+            android:name="level"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+
 </navigation>

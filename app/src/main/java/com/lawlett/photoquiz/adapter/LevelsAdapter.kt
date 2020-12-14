@@ -13,8 +13,8 @@ class LevelsAdapter (private val listener: Listener):
     class LevelsViewHolder(private val itemBinding: LevelItemBinding) :
         RecyclerView.ViewHolder(itemBinding.root) {
         fun bind(levels: Level,listener: Listener) {
-            itemBinding.lvlBtn.text = levels.level.toString()
-            itemBinding.lvlBtn.setOnClickListener { listener.onItemClick(levels) }
+            itemBinding.lvlBtn.text = levels.id.toString()
+            itemBinding.lvlBtn.setOnClickListener { listener.onItemClick(levels.id) }
         }
     }
 
@@ -29,16 +29,17 @@ class LevelsAdapter (private val listener: Listener):
     }
 
     override fun onBindViewHolder(holder: LevelsViewHolder, position: Int) {
-        val paymentBean: Level = list[position]
-        holder.bind(paymentBean,listener)
+        val level: Level = list[position]
+        holder.bind(level,listener)
     }
 
     fun add(model: MutableList<Level>) {
         this.list = model
         notifyDataSetChanged()
     }
+
     interface Listener {
-        fun onItemClick(level: Level)
+        fun onItemClick(level: Int?)
     }
 
 }
