@@ -34,29 +34,10 @@ class LevelsFragment : BaseFragment(R.layout.fragment_levels), LevelsAdapter.Lis
     }
 
     private fun addList() {
+
         var isShown: Boolean = LevelPreference.getInstance(requireContext())!!.isShown
         if (!isShown) {
-
-            list.add(Level(id = 1))
-            list.add(Level(id = 2))
-            list.add(Level(id = 3))
-            list.add(Level(id = 4))
-            list.add(Level(id = 5))
-            list.add(Level(id = 6))
-            list.add(Level(id = 7))
-            list.add(Level(id = 8))
-            list.add(Level(id = 9))
-            list.add(Level(id = 10))
-            list.add(Level(id = 11))
-            list.add(Level(id = 12))
-            list.add(Level(id = 13))
-            list.add(Level(id = 14))
-            list.add(Level(id = 15))
-            list.add(Level(id = 16))
-            list.add(Level(id = 17))
-            list.add(Level(id = 18))
-            list.add(Level(id = 19))
-            list.add(Level(id = 20))
+            for (i in 1..21) list.add(Level(id = i))
             adapter.add(list)
             LevelPreference.getInstance(requireContext())!!.saveShown()
         }

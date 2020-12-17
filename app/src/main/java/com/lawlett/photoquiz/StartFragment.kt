@@ -208,6 +208,14 @@ class StartFragment : BaseFragment(R.layout.fragment_start) {
                 fourImg = "https://altufevo.ru/i/torty/podarochnye-torty/podarochnyj-tort-rajskoe-yablochko-490_800x600.jpg",
                 answer = "Рустам"
             )
+            val twentyOneLevel= Level(
+                id=21,
+                firstImg = "https://img5.lalafo.com/i/posters/original/df/a4/ee/477281d2c2dd1d35d23cd52add.jpeg",
+                secondImg ="",
+                thirdImg = "",
+                fourImg = "",
+                answer = "Чайниasdasк"
+            )
             viewModel.addLevel(firstLevel)
             viewModel.addLevel(secondLevel)
             viewModel.addLevel(thirdLevel)
@@ -228,6 +236,7 @@ class StartFragment : BaseFragment(R.layout.fragment_start) {
             viewModel.addLevel(eighteenLevel)
             viewModel.addLevel(nineteenLevel)
             viewModel.addLevel(twentyLevel)
+            viewModel.addLevel(twentyOneLevel)
             StartPreference.getInstance(requireContext())!!.saveShown()
             findNavController().navigate(R.id.action_startFragment_to_levelsFragment)
         }
