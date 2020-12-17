@@ -54,7 +54,7 @@ class StartFragment : BaseFragment(R.layout.fragment_start) {
                 secondImg = "https://img.global.news.samsung.com/ru/wp-content/uploads/2020/04/KV-notext.jpg",
                 thirdImg = "https://i.mycdn.me/i?r=AEE-HZfz734vGAKlsp5gLh-pQ0e66eKYS1lEH4dKCDbkbpsaYV3Kk5HSLDfCIWlmrGrehZAV638o6OqI7JEuxlI9&fn=external_8",
                 fourImg = "https://bigpicture.ru/wp-content/uploads/2018/12/26_picture_5655b6fbdd5ec755478101_fishkithumbf3n_jpg.jpg",
-                answer = "Азиз"
+                answer = "Чайник"
             )
             val secondLevel = Level(
                 id = 2,
